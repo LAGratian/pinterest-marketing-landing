@@ -20,7 +20,14 @@
   <meta name="twitter:image"      content="https://lagratian.github.io/pinterest-marketing-landing/pingrowthpro-logo.png" />
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f8f4; /* subtle cream background */
+    }
     a { text-decoration: none; }
     .container { max-width: 800px; margin: auto; padding: 20px; }
     header { text-align: center; padding: 40px 0; }
@@ -29,6 +36,16 @@
     header p { font-size: 1.2rem; color: #666; }
     .btn-cta { display: inline-block; background: #1DBF73; color: #fff; padding: 15px 25px; border-radius: 5px; font-size: 1rem; margin: 20px 0; }
     section { margin-bottom: 40px; }
+    .fiverr-cta {
+      background: #fff7e6;
+      border: 1px solid #ffe3b3;
+      border-radius: 8px;
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    .fiverr-cta h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .fiverr-cta p { font-size: 1rem; color: #555; margin-bottom: 20px; }
     .features ul { list-style: disc inside; }
     .step { margin-bottom: 20px; }
     .testimonial { background: #f9f9f9; padding: 20px; border-left: 4px solid #1DBF73; }
@@ -52,24 +69,29 @@
 
     <!-- Lead Magnet Form -->
     <section id="lead-form">
-  <h2>Download Your Free Pinterest Marketing Checklist</h2>
-  <p>Enter your email to receive our proven 5-step checklist:</p>
+      <h2>Download Your Free Pinterest Marketing Checklist</h2>
+      <p>Enter your email to receive our proven 5-step checklist:</p>
+      <!-- START FormSubmit Form -->
+      <form action="https://formsubmit.co/your@email.com" method="POST">
+        <input type="hidden" name="_next" value="https://lagratian.github.io/pinterest-marketing-landing/checklist.pdf">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="email" name="email" placeholder="Your best email" required>
+        <button type="submit" class="btn-cta">Get Your Free Checklist</button>
+      </form>
+      <!-- END FormSubmit Form -->
+      <p class="note">After signing up, you’ll be automatically redirected to download your PDF.</p>
+    </section>
 
-  <form action="https://formsubmit.co/lagratian@outlook.com" method="POST">
-    <!-- Redirige al PDF tras el envío -->
-    <input type="hidden" name="_next" value="https://lagratian.github.io/pinterest-marketing-landing/checklist.pdf">
-    <!-- Evita captchas -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <input type="email" name="email" placeholder="Your best email" required>
-    <button type="submit" class="btn-cta">Get Your Free Checklist</button>
-  </form>
-
-  <p class="note">After signing up, you’ll be automatically redirected to download your PDF.</p>
-</section>
     <!-- Direct download button as fallback -->
     <section class="download" style="text-align:center;">
       <a href="checklist.pdf" class="btn-cta" download>📥 Download the Free Checklist (PDF)</a>
+    </section>
+
+    <!-- Optional Fiverr CTA -->
+    <section class="fiverr-cta">
+      <h2>Want more Pinterest marketing strategies?</h2>
+      <p>Hire your expert now on Fiverr and take your Pinterest game to the next level.</p>
+      <a href="https://go.fiverr.com/visit/?bta=1120830&brand=fiverrmarketplace&landingPage=https%253A%252F%252Flagratian.github.io%252Fpinterest-marketing-landing%252F" target="_blank" class="btn-cta">Get Expert Help on Fiverr</a>
     </section>
 
     <!-- Why Fiverr -->
